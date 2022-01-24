@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mediaqueries';
+
+.section-contact {
+    width: 100%;
+    background: #E5E7E9;
+
+    h2 {
+        text-align: center;
+        padding: 20px;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 5px;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .form-item {
+            label {
+                width: 100%;
+                font-size: 1.2rem;
+                display: block;
+                text-align: left;
+            }
+
+            input {
+                width: 100%;
+                font-size: 1rem;
+                padding: 5px;
+                display: block;
+                margin: 10px 0 20px;
+                outline: none;
+                border: none;
+                background: none;
+                border-bottom: 1px solid $color-pri;
+            }
+
+            textarea {
+                @include w-h;
+                max-height: 200px;
+                font-size: 1rem;
+                padding: 5px;
+                background: none;
+                border: none;
+                border: 1px solid $color-pri;
+            }
+        }
+    }
+}
+
+.form-mail {
+    @include tablet {
+        margin: 0 10px;
+    }
+}
+
+.form-message {
+    @include tablet {
+        grid-column: 1 / -1;
+    }
+}

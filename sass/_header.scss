@@ -1,0 +1,112 @@
+@import 'variables';
+@import 'mediaqueries';
+
+.header {
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    position: sticky;
+    z-index: 999;
+    background: #fff;
+    top: 0;
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        @include flex-style(space-between);
+    }
+
+    .logo {
+
+        h2 {
+            a {
+                text-decoration: none;
+                color: $color-pri;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.navbar-icon {
+    cursor: pointer;
+    button {
+        width: 25px;
+        height: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        @media (min-width: 865px){
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+
+.section-bar {
+    display: none;
+
+    @include tablet-md-desktop {
+        display: block;
+
+        a {
+            display: inline-block;
+            padding: 15px;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            color: $color-pri;
+            transition: all 0.4s;
+
+            &:hover {
+                background: $color-pri;
+                color: #fff;
+                transition: all 0.4s;   
+            }
+        }
+    }
+}
+
+.bg {
+    @include w-h;
+    height: 400px;
+    background-image: url(/media/ecommerce.jpg);
+    @include bg-style;
+    @include flex-style(center);
+    flex-direction: column;
+
+    @include tablet {
+        height: 600px;
+    }
+
+    h1 {
+        color: #CD6155 ;
+        font-size: 2.5rem;
+
+        @include tablet {
+            font-size: 3.75rem;
+            letter-spacing: 4px;
+        }
+    }
+
+    h3 {
+        color: #CD6155;
+        opacity: 0.8;
+        padding: 15px;
+        text-align: center;
+        font-size: 1.1rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+}

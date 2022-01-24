@@ -1,0 +1,29 @@
+$color-pri: #5499C7;
+$subtitle-size: 1.5rem;
+
+
+@mixin button-style {
+    width: 200px;
+    height: 80px;
+    padding: 10px 15px;
+    font-size: 1.7rem;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+@mixin flex-style($jc){
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+@mixin w-h {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin bg-style {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
